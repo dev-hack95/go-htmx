@@ -1,0 +1,14 @@
+package user
+
+import (
+  "github.com/dev-hack95/go-htmx/view/layout"
+  "github.com/dev-hack95/go-htmx/view/components"
+  "github.com/dev-hack95/go-htmx/structs"
+)
+
+templ Show(user structs.User) {
+  @layout.Base() {
+      <h1>Hello {user.Email} from the user page</h1>
+      @components.Input("test", "test")
+  }
+}
